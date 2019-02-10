@@ -10,16 +10,16 @@ namespace PadawansTask3
             // throw new NotImplementedException();
             checked
             {
-                if (a == 0 || b == 0)
-            {
-                throw new ArgumentException();
-            }
-            else
-            {
-                while (b != 0)
-                    b = a % (a = b);
-                return a;
-            }
+                if (a == 0 && b == 0)
+                {
+                    throw new ArgumentException();
+                }
+                else
+                {
+                    while (b != 0)
+                        b = a % (a = b);
+                    return Math.Abs(a);
+                }
             }
         }
     }
